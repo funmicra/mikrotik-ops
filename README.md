@@ -20,6 +20,7 @@ It supports tasks such as system info retrieval, user management, firewall and s
   - Backups and restores
   - DHCP lease management
   - VPN status monitoring
+  - and much more...
 - Extensible task registry for easy task addition.
 - Configurable via environment variables or `.env` file.
 - Optional dry-run mode for testing.

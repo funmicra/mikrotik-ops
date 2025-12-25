@@ -1,28 +1,6 @@
 # -----------------------------------------
 # MikroTik SSH Task Runner / Inventory Tool
 # -----------------------------------------
-#
-# This script provides a CLI interface to run advanced SSH tasks
-# on multiple MikroTik routers. Features include:
-#   - Displaying router inventory from config
-#   - Selecting routers to target
-#   - Running tasks defined in TASKS registry
-#   - Managing SSH sessions (connect/close) safely
-#   - Graceful handling of errors per router
-#
-# Dependencies:
-#   - routers.py: get_router_clients() to return router SSH clients
-#   - ui.py: CLI menu helpers (show_menu, get_user_choice, select_routers)
-#   - registry.py: TASKS dict defining available tasks
-#   - config.py: ROUTERS dict with router names and IPs
-#
-# Usage:
-#   python3 task_runner.py
-#   - Select a task from menu
-#   - Choose one or more routers to execute the task
-#   - Task output is displayed per router
-# -----------------------------------------
-
 
 from routers import get_router_clients
 from ui import show_menu, get_user_choice, select_routers
