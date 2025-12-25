@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pycache/
+*.pytest_cache/
+*.mypy_cache/
+*.coverage
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# VSCode / IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Docker
+*.dockerfile
+docker-compose.override.yml
+**/Dockerfile.*
+**/docker-compose.override.yml
+
+# Environment files
+.env
+.env.*.local
+
+# Logs
+*.log
+logs/
+*.out
+
+# Build / dist
+build/
+dist/
+*.tar.gz
+*.whl
+
+# PyInstaller / executables
+*.spec
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Misc
+*.bak
+*.swp
+*.tmp
