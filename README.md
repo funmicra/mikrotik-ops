@@ -3,6 +3,8 @@
 A Python CLI application to manage MikroTik routers via SSH.  
 It supports tasks such as system info retrieval, user management, firewall and service control, backups, VPN status, interface monitoring, DHCP leases, and more.
 
+![Mikrotik-Ops screenshot](images/mikrotik-ops.png)
+
 ---
 
 ## Features
