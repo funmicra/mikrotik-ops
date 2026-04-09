@@ -28,7 +28,7 @@ class MikroTikClient:
             )
 
             if self.ssh_key:
-                key = paramiko.RSAKey.from_private_key_file(self.ssh_key)
+                key = paramiko.Ed25519Key.from_private_key_file(self.ssh_key)
                 self.client.connect(
                     hostname=self.host,
                     port=self.port,
