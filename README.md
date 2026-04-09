@@ -39,21 +39,21 @@ It supports tasks such as system info retrieval, user management, firewall and s
 ## Project Structure
 ```bash
 mikrotik-ops/
-├── client.py					  # Router API wrapper
+├── client.py					    # Router API wrapper
 ├── config.py				      # Env & configuration
 ├── dockerfile
 ├── main.py					      # CLI entrypoint
 ├── README.md
-├── registry.py				      # Task registry
+├── registry.py				    # Task registry
 ├── requirements.txt
-├── routers.py				      # Router client management
-├── tasks					      # Task implementations
+├── routers.py				    # Router client management
+├── tasks					        # Task implementations
 │   ├── __init__.py
 │   ├── misc1_2.py
 │   ├── misc13_23.py
 │   ├── misc24_34.py
 │   └── misc3_13.py
-└── ui.py					      # CLI UI helpers
+└── ui.py					        # CLI UI helpers
 ```
 
 ---
