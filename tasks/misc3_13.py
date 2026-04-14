@@ -2,7 +2,9 @@
 # Additional Advanced MikroTik SSH Tasks
 # -----------------------------------------
 
-
+import os
+import glob
+import subprocess
 
 
 ###################
@@ -20,7 +22,6 @@ def task_reboot_router(client, router_name=None, *args, **kwargs):
     except Exception as e:
         print(f"{router_name}: Failed to trigger reboot: {e}")
 
-import subprocess
 ###################
 # Open an interactive SSH shell to the router
 ###################
@@ -56,12 +57,9 @@ def task_scheduler(client, router_name=None):
     except Exception as e:
         print(f"{router_label} Error retrieving scheduler: {e}")
 
-import os
 ###################
 # Import SSH public keys for a given user
 ###################
-import os
-import glob
 
 def task_import_ssh_keys(client, router_name=None):
     label = f"[{router_name}]" if router_name else ""

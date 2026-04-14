@@ -2,6 +2,22 @@ import paramiko
 from paramiko import SSHException, AuthenticationException
 
 
+_KEY_TYPES = [
+    paramiko.Ed25519Key,
+    paramiko.RSAKey,
+    paramiko.ECDSAKey,
+]
+
+
+def _load_private_key(path: str):
+    for key_class in _KEY_TYPES:
+        try:
+            return key_class.from_private_key_file(path)
+        except (SSHException, ValueError):
+            continue
+    raise RuntimeError(f"Could not load SSH key (unsupported type): {path}")
+
+
 class MikroTikClient:
     def __init__(
         self,
@@ -28,7 +44,7 @@ class MikroTikClient:
             )
 
             if self.ssh_key:
-                key = paramiko.Ed25519Key.from_private_key_file(self.ssh_key)
+                key = _load_private_key(self.ssh_key)
                 self.client.connect(
                     hostname=self.host,
                     port=self.port,
@@ -70,9 +86,3 @@ class MikroTikClient:
             raise RuntimeError(f"Router error: {err}")
 
         return stdout.read().decode().strip()
-
-    @property
-    def keys(self):
-        if not self.client:
-            raise RuntimeError("Not connected to router")
-        return RouterKeys(self)

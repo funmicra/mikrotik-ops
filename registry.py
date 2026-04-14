@@ -1,4 +1,4 @@
-from tasks.misc1_2 import get_system_identity, get_system_resources, task_system_info, check_updates, install_updates, task_package_updates
+from tasks.misc1_2 import task_system_info, task_package_updates
 from tasks.misc3_13 import task_reboot_router, task_ssh_shell, task_scheduler, task_import_ssh_keys, task_create_user, task_services, task_system_logs, task_ip_addresses, task_firewall_rules, task_interfaces_status, task_backup_config
 from tasks.misc13_23 import task_backup_restore, task_interface_traffic, task_dhcp_leases, task_routes, task_firewall_manage, task_vpn_status, task_queue_status, task_user_audit, task_time_ntp, task_arp_neighbor
 from tasks.misc24_34 import task_bandwidth_accounting, task_hotspot_users, task_dns_cache, task_logs_export, task_certificates, task_bandwidth_test, task_capsman_status, task_netwatch, task_snmp_status, task_script_management, task_queue_tree, task_traffic_flow, task_vpn_user_management
@@ -17,7 +17,7 @@ TASKS = {
     10: {"name": "System Logs", "func": task_system_logs},
     11: {"name": "Manage Services", "func": task_services},
     12: {"name": "Scheduled Tasks", "func": task_scheduler},
-    13: {"name": "shell", "func": task_ssh_shell},
+    13: {"name": "Shell", "func": task_ssh_shell},
     14: {"name": "Backup & Restore Config", "func": task_backup_restore},
     15: {"name": "Interface Traffic", "func": task_interface_traffic},
     16: {"name": "DHCP Lease Management", "func": task_dhcp_leases},
@@ -41,9 +41,4 @@ TASKS = {
     34: {"name": "Queue Tree Status", "func": task_queue_tree},
     35: {"name": "Traffic Flow Info", "func": task_traffic_flow},
     36: {"name": "VPN User Management", "func": task_vpn_user_management},
-    37: {"name": "Install Available Updates", "func": install_updates},
-    38: {"name": "Retrieve system identity (router name)", "func": get_system_identity},
-    39: {"name": "Retrieve system resources", "func": get_system_resources},
-    41: {"name": "Check for available package updates", "func": check_updates},
-    42: {"name": "Install available package updates", "func": install_updates},
 }
